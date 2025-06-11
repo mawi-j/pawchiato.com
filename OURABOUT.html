@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pawchiato</title>
+        <link rel="stylesheet" href="aboutusindividual.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    </head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="logo"/>
+            <b>pawchiato</b>
+        </div>
+        <nav class="nav-links">
+            <a href="HOME.html">Home</a>
+            <a href="ourpets.html">Our Pets</a>
+            <a href="OURABOUT.html">About Us</a>
+            <a href="ADOPTIONPAPER.html"><button class="adopt-btn">Adopt Now!</button></a>
+        </nav>
+    </header>
+
+    <hr class="divider">
+
+<section class="contact-section">
+    <h1 class="title" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">CONTACT US</h1>
+    <p class="bio" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="700">
+        We'd love to hear from you! Whether you have questions about adoption, donations, or how you can help, feel free to reach out.
+    </p>
+    <hr class="divider">
+
+    <div class="contact-form" data-aos="fade-up" data-aos-delay="600">
+        <form action="submit_contact_form.php" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+            <button type="submit">Send Message</button>
+        </form> 
+    </div>   
+</section>
+
+   <div id="successModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Email Sent!</h2>
+      <p>Thanks for reaching out. We'll get back to you soon.</p>
+    </div>
+  </div> 
+   <br><br>
+
+   <section class="contact-info-section">
+    <div class="contact-info-container">
+      <div class="img">
+        <img src="pawchiato.jpg" alt="PAWCHIATO">
+      </div>
+      <div class="info-text">
+        <h2>PAWCHIATO</h2>
+        <p><strong>Address:</strong><br> Cnud2naglalaro Ngrolbox Street</p>
+        <p><strong>Email:</strong><br> pawchiato@gmail.com</p>
+        <p><strong>Landline:</strong><br> (00) 1431 4314</p>
+        <p><strong>Mobile:</strong><br> 09143143000</p>
+      </div>
+    </div>
+  </section>
+
+   <script>
+    document.querySelector(".contact-form form").addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent actual submission
+    
+      // Show the modal
+      document.getElementById("successModal").style.display = "block";
+    
+      // Optional: reset the form
+      this.reset();
+    });
+    
+    // Close modal logic
+    document.querySelector(".close-button").onclick = function() {
+      document.getElementById("successModal").style.display = "none";
+    };
+    
+    window.onclick = function(event) {
+      const modal = document.getElementById("successModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+    </script>
+    
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+<br><br><br><br>
+<footer>
+    <div class="footer-top">
+        <div class="footer-overlay">
+            <div class="footer-left">
+                <h3><em>Mission & Vision</em></h3>
+                <p><strong>Mission:</strong> To rescue, rehabilitate, and rehome stray and abandoned dogs or cats.</p>
+                <p><strong>Vision:</strong> A compassionate society where every dog or cat has a loving home.</p>
+            </div>
+        
+            <div class="footer-right">
+                <p><strong>Services Offered</strong><br>
+                Pet Adoption<br>
+                Rescue Operations<br>
+                Free/Low-cost Vaccination Drives<br>
+                Pet Rehabilitation & Foster Care<br>
+                Education Campaigns on Responsible Pet Ownership</p>
+        
+                <p><strong>Operating Hours</strong><br>
+                Monday to Saturday: 9:00 AM – 5:00 PM<br>
+                Sunday: Closed (except for special events)</p>
+            </div>
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p><em>Pawchiato 2025. All rights reserved.</em></p>
+    </div>
+</footer>
+
+
+</html>
+    

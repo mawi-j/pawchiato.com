@@ -1,0 +1,127 @@
+    body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF7D1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    z-index: 2;
+    position: relative;
+    background-color: transparent;
+}
+  
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo img {
+    height: 40px;
+}
+  
+.nav-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+@media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #FFECC8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #FFB0B0;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+
+h3 {
+    color: #555;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 17px;
+}
+
+input[type="text"],input[type="pet"], input[type="tel"],input[type="email"],input[type="number"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #FFF7D1;
+    background-color:#FFF7D1;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFB0B0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b45270;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }

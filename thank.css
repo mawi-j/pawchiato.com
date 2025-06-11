@@ -1,0 +1,78 @@
+html, body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF7D1;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    z-index: 2;
+    position: relative;
+    background-color: transparent;
+}
+  
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo img {
+    height: 40px;
+}
+  
+.nav-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+.thank {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0.40;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+.button-container {
+    position: absolute;
+    bottom: 40px;        
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;           
+}
+.back{
+    background-color: #FFD09B;
+    color: #d67600;
+    border: none;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 120px;
+    max-width: fit-content;
+    justify-content: flex-start;
+}
+.back:hover{
+    background-color: #fbbf77;
+}

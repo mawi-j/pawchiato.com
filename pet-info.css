@@ -1,0 +1,192 @@
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    background-image: url('bg.png'); 
+    background-size: cover;        
+    background-repeat: no-repeat;  
+    background-position: center;   
+    background-attachment: fixed;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    z-index: 2;
+    position: relative;
+    background-color: transparent;
+}
+  
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo img {
+    height: 40px;
+}
+  
+.nav-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+  
+.adopt-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+  
+.adopt-btn:hover {
+    background-color: #FFD09B;
+}
+@media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+/*card for adoption*/
+
+.pet-detail-section {
+    padding: 60px 40px;
+    background-image: url('bg.png'); 
+    background-size: cover;        
+    background-repeat: no-repeat;  
+    background-position: center;   
+    background-attachment: fixed;;
+
+}
+
+.pet-card{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    justify-content: center;
+}
+   
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.pet-image-placeholder {
+    width: 300px;
+    height: 300px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.pet-image-placeholder img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.apply-btn {
+    padding: 0.8rem 1.6rem;
+    background-color: #FFE2B0;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-decoration:none;
+    color:inherit;
+}
+
+.apply-btn:hover {
+    background-color: #FFD09B;
+}
+
+.pet-info {
+    padding-top: 30px;
+}
+
+
+.pet-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.pet-info p {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.footer {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-image: url('footer.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #1a1a1a;
+}
+.footer-overlay {
+    background-color: rgba(255, 247, 209, 0.85); 
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 8px;
+}  
+.footer-left,.footer-right {
+    width: 45%;
+}  
+.footer-left h3 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+.footer-left p{
+    line-height: 1.5;
+    font-size: 27px;
+    margin-top: 2px;
+}
+.footer-right p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #FFD09B;
+    font-size: 16px;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+}

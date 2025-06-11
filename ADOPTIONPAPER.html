@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ADOPTION.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("Tz6HzeaX6Of_RVF49");
+  })();
+</script>
+
+    <title>Dog Adoption Application Form</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="logo"/>
+            <b>pawchiato</b>
+        </div>
+        <nav class="nav-links">
+            <a href="HOME.html">Home</a>
+            <a href="ourpets.html">Our Pets</a>
+            <a href="OURABOUT.html">About Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>ADOPTION APPLICATION FORM</h1>
+        <h3>Please fill out the following.</h3>
+        <form id="adoption-form">
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="middleInitial">M.I.:</label>
+            <input type="text" id="middleInitial" name="middleInitial">
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="address">Current Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="daytimePhone">Phone Number:</label>
+            <input type="tel" id="daytimePhone" name="daytimePhone" required>
+
+            <label for="email">Email address:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation">
+
+            <h2>Family & Housing</h2>
+            <label for="adultsInHousehold">How many other adults live in this household?</label>
+            <input type="number" id="adultsInHousehold" name="adultsInHousehold" required>
+
+            <label for="otherAdult1">Name of other adult:</label><br>
+            <input type="text" id="other1First" name="other1First" placeholder="First Name">
+            <input type="text" id="other1Middle" name="other1Middle" placeholder="M.I.">
+            <input type="text" id="other1Last" name="other1Last" placeholder="Last Name">
+            <input type="text" id="other1Relation" name="other1Relation" placeholder="Relationship">
+
+            <label for="children">How many children?</label>
+            <input type="text" id="children" name="children">
+
+            <label for="agreement">Is everyone in agreement with the decision to adopt?</label>
+            <input type="text" id="agreement" name="agreement">
+
+            <label for="householdDescription">Please describe your household:</label>
+            <textarea id="householdDescription" name="householdDescription" rows="4"></textarea>
+
+            <label for="pet">Pet Name:</label>
+            <input type="text" id="pet" name="pet" required>
+
+            <input type="hidden" name="file_url" value="thanku.png">
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-button" onclick="closeModal()">&times;</span>
+          <h2>Thank You!</h2>
+          <p>Your adoption application has been submitted successfully.</p>
+          <a href="thanku.html"><button>Continue</button></a>
+        </div>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+        (function(){
+            emailjs.init("Tz6HzeaX6Of_RVF49"); 
+        })();
+
+        document.getElementById('adoption-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_6mcdxrb', 'template_2zu2luj', this)
+    .then(function() {
+        showModal(); // show the custom popup
+    }, function(error) {
+        console.error("Error sending email: ", error);
+    });
+});
+
+function showModal() {
+    document.getElementById('popup-modal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('popup-modal').style.display = 'none';
+}
+    </script>
+</body>
+</html>
